@@ -65,7 +65,7 @@ In our Analysis worksheet,we found;
  - Least expensive price
  - Most expensive product
  - Least expensive product
- - 
+   
 We checked for correlation between discount versus reviews,rating versus review and current price versus rating.None had a regression coeficient of above 7 so all had very weak correlation.Infact we can say they were not correlated.
 The pearson analysis always found the variables to have weak/insignificant relationships.
 
