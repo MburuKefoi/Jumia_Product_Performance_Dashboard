@@ -28,19 +28,29 @@ vague results
 
 ## Formulas
 Used the following formulas to check our discount and ratings
+
      =IF(OR(ISBLANK[@Rating],[@Rating]<0,[@Rating]>5),"Check Rating","Ok")
      =IF(OR(ISBLANK[@Discount],[@Discount]<0,[@Discount]>5),"Check Rating","Ok")
+     
  To check prices we first had to have a threshhold that we created using this formulae
+ 
      =IF(OR([Current Price]>[Old Price]),"Check Prices","Ok")
+     
 We then grouped ratings,prices and discount into categories of three
+
      =QUARTILE.INC(tblproducts[Current Price],1)
      =QUARTILE.INC(tblproducts[Current Price],3)
+     
 The above formulas will give you the first quarter of price that will we use as threshhold for low price and the second quarter will give the threshhold for high prices.To get our price category we will reference the above formulas
 Having formulae one as PriceQ1 and formulae two as PriceQ3,we catogorise price as follows
+
      =IF([@Current Price]<Priceq1,"Low Prices",IF([@Current Price<PriceQ3,"Medium Price,High Price))
+     
 For ratings and discount categories use the following formulas
+
      =IF([@Ratings]<3,"Poor",IF([@Ratings]<4,"Average","Excellent"))
      =IF([@Discount]<20%,"Low Discount",IF([@Discount}<40%,"Medium Discount","High Discount"))
+     
 We also had different formulas we used to find engagement and performance flags as shown in our workbook 
 
 ## Analysis
@@ -55,6 +65,7 @@ In our Analysis worksheet,we found;
  - Least expensive price
  - Most expensive product
  - Least expensive product
+ - 
 We checked for correlation between discount versus reviews,rating versus review and current price versus rating.None had a regression coeficient of above 7 so all had very weak correlation.Infact we can say they were not correlated.
 The pearson analysis always found the variables to have weak/insignificant relationships.
 
