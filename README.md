@@ -5,9 +5,13 @@ The following project is about Jumia products where we are analysing data to ena
 
 ## Project Objectives
 To determine whether large discounts are associated with reviews
+
 To understand if higher ratings attracts strong engagements
+
 To determine if price and ratings are correlated
+
 Which are the best performing products
+
 Which products may need different pricing
 
 ## Jumia Dataset
